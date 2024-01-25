@@ -26,7 +26,7 @@ class RecipeFactory extends Factory
             'author_id' => rand(1, 5),
             'category_id' => rand(1, 3),
             'published_date' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d'), // '2021-01-01
-            'description' => $this->faker->paragraph(),
+            'description' => $this->faker->text(500),
             'image' => $imageUrl[rand(0, 2)],
         ];
     }

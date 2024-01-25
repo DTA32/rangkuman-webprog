@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [RecipeController::class, 'home'])->name('home');
+Route::get('/category/{category}', [CategoryController::class, 'recipeByCategory'])->name('category');
+Route::get('/recipe/{id}', [RecipeController::class, 'detail'])->name('recipeDetail');
