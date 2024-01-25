@@ -33,6 +33,7 @@ class RecipeController extends Controller
     }
     public function manage(){
         $recipes = Recipe::orderBy('id', 'desc')->get();
+        // dd($recipes);
         return view('recipe.manage', ['recipes' => $recipes]);
     }
     public function createPage(){

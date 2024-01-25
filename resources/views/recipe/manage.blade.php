@@ -14,6 +14,7 @@
             <div class="d-flex">
                 <a href="{{ route('recipeCreate') }}" class="btn btn-primary">Create</a>
             </div>
+            <p>Total: {{ $recipes->count() }} resep</p>
             <table class="table table-hover">
                 <thead>
                     <tr>

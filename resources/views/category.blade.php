@@ -4,7 +4,8 @@
 
 @section('content')
     <main class="container my-5">
-        <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+        <div class="d-flex flex-column justify-content-center gap-5">
+            <p>Terdapat {{ $recipes->count() }} resep di kategori {{ $category }}</p>
             @foreach ($recipes as $recipe)
                 <a href="{{ route('recipeDetail', $recipe->id) }}"
                     class="d-flex gap-3 align-items-center text-decoration-none text-dark">

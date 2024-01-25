@@ -7,7 +7,8 @@
         <div class="d-flex flex-column gap-3">
             <h4>{{ $recipe->title }}</h4>
             <h6>{{ $recipe->category->name }}</h6>
-            <img src="../storage/images/{{ $recipe->image }}" class="rounded" alt="..." style="width:100%">
+            <img src="../storage/images/{{ $recipe->image }}" class="rounded" alt="..."
+                style="width:100%; max-height:400px">
             <div class="d-flex gap-1">
                 <p>{{ $recipe->author->name }}</p>
                 <p>|</p>
