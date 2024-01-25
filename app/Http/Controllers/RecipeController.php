@@ -69,7 +69,7 @@ class RecipeController extends Controller
         $file->storeAs($subdirectory, $filename, 'public');
         $recipe->image = $filename;
         $recipe->save();
-        return redirect()->route('recipeManage')->with('message', 'Recipe created successfully');
+        return redirect()->route('recipeManage');
     }
     public function editPage($id){
         $recipe = Recipe::find($id);
@@ -104,13 +104,13 @@ class RecipeController extends Controller
             $recipe->save();
         }
         $recipe->save();
-        return redirect()->route('recipeManage')->with('message', 'Recipe edited successfully');
+        return redirect()->route('recipeManage');
     }
     public function delete($id){
         $recipe = Recipe::find($id);
         $image = $recipe->image;
         $recipe->delete();
         Storage::delete('public/images/' . $image);
-        return redirect()->route('recipeManage')->with('message', 'Recipe deleted successfully');
+        return redirect()->route('recipeManage');
     }
 }
