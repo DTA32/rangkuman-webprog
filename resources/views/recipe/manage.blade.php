@@ -5,6 +5,11 @@
 @section('content')
     <main class="container my-5">
         <div class="d-flex flex-column gap-3">
+            @if (session('message'))
+                <div class="alert alert-info">
+                    {{ session('message') }}
+                </div>
+            @endif
             <h1>Manage Recipes</h1>
             <div class="d-flex">
                 <a href="{{ route('recipeCreate') }}" class="btn btn-primary">Create</a>

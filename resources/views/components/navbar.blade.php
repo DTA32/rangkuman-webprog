@@ -22,8 +22,19 @@
                 </a>
             </div>
         </div>
-        <a class="nav-link" href="{{ route('recipeManage') }}">
-            Manage Recipes
-        </a>
+        <div class="d-flex gap-2">
+            <a class="nav-link" href="{{ route('loginPage') }}">
+                Login
+            </a>
+            <a class="nav-link" href="{{ route('logout') }}">
+                Logout
+            </a>
+            <a class="nav-link" href="{{ route('registerPage') }}">
+                Register
+            </a>
+            <a class="nav-link" href="{{ route('recipeManage') }}">
+                Manage Recipes
+            </a>
+        </div>
     </div>
 </nav>

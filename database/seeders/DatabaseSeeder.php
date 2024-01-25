@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Author;
 use App\Models\Category;
 use App\Models\Recipe;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,5 +37,6 @@ class DatabaseSeeder extends Seeder
         for($i = 0; $i < 10; $i++) {
             $recipe = Recipe::factory()->create();
         }
+        $user = User::factory()->create();
     }
 }
