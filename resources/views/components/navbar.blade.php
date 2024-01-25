@@ -17,8 +17,8 @@
                 <a class="nav-link" href="{{ route('category', 3) }}">
                     Resep Makan Malam
                 </a>
-                <a class="nav-link" href="{{ route('home') }}">
-                    About
+                <a class="nav-link" href="{{ route('about') }}">
+                    {{ __('about.navbar') }}
                 </a>
             </div>
         </div>

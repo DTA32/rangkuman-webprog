@@ -24,3 +24,7 @@ Route::get('/recipe/{id}', [RecipeController::class, 'detail'])->name('recipeDet
 Route::get('/recipe/{id}/edit', [RecipeController::class, 'editPage'])->name('recipeEditPage');
 Route::put('/recipe/{id}/edit', [RecipeController::class, 'edit'])->name('recipeEdit');
 Route::delete('/recipe/{id}/delete', [RecipeController::class, 'delete'])->name('recipeDelete');
+Route::get('/about/{locale?}' , function($locale = 'en'){
+    App::setLocale($locale);
+    return view('about');
+})->name('about');
