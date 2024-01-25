@@ -17,4 +17,8 @@ class CategoryController extends Controller
         $category = $recipes[0]->category->name;
         return view('category', ['recipes' => $recipes, 'category' => $category]);
     }
+    public function getAll(){
+        $categories = Category::all();
+        return $categories;
+    }
 }

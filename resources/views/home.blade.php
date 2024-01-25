@@ -8,7 +8,8 @@
             @foreach ($recipes as $recipe)
                 <a href="{{ route('recipeDetail', $recipe->id) }}"
                     class="d-flex gap-3 align-items-center text-decoration-none text-dark">
-                    <img src="{{ $recipe->image }}" class="rounded" alt="..." style="max-width: 200px; height: 200px">
+                    <img src="storage/images/{{ $recipe->image }}" class="rounded" alt="..."
+                        style="max-width: 200px; height: 200px">
                     <div class="d-flex flex-column gap-3">
                         <h6>{{ $recipe->title }}</h6>
                         <p>{{ $recipe->description }}</p>

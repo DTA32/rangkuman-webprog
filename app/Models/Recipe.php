@@ -9,6 +9,15 @@ class Recipe extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "title",
+        "author_id",
+        "category_id",
+        "published_date",
+        "description",
+        "image",
+    ];
+
     public function author()
     {
         return $this->belongsTo(Author::class);
