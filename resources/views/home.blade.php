@@ -4,6 +4,11 @@
 
 @section('content')
     <main class="container my-5">
+        @if (session('message'))
+            <div class="alert alert-info">
+                {{ session('message') }}
+            </div>
+        @endif
         <div class="d-flex flex-column justify-content-center gap-5">
             @foreach ($recipes as $recipe)
                 <a href="{{ route('recipeDetail', $recipe->id) }}"

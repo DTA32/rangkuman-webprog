@@ -7,6 +7,11 @@
         <div class="border shadow p-5" style="padding-left: 60px; padding-right: 60px">
             <div class="d-flex flex-column gap-3">
                 <h4 class="text-center">Login</h4>
+                @if (session('message'))
+                    <div class="alert alert-info">
+                        {{ session('message') }}
+                    </div>
+                @endif
                 <form action="{{ route('login') }}" method="POST" class="d-flex flex-column gap-3 p-3">
                     @csrf
                     <div class="mb-3">

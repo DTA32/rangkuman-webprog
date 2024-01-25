@@ -22,19 +22,23 @@
                 </a>
             </div>
         </div>
-        <div class="d-flex gap-2">
-            <a class="nav-link" href="{{ route('loginPage') }}">
-                Login
-            </a>
-            <a class="nav-link" href="{{ route('logout') }}">
-                Logout
-            </a>
-            <a class="nav-link" href="{{ route('registerPage') }}">
-                Register
-            </a>
-            <a class="nav-link" href="{{ route('recipeManage') }}">
-                Manage Recipes
-            </a>
+        <div class="d-flex gap-3 align-items-center">
+            @if (auth()->check())
+                <p class="mb-0">Halo, {{ auth()->user()->name }}</p>
+                <a class="nav-link" href="{{ route('recipeManage') }}">
+                    Manage Recipes
+                </a>
+                <a class="nav-link" href="{{ route('logout') }}">
+                    Logout
+                </a>
+            @else
+                <a class="nav-link" href="{{ route('loginPage') }}">
+                    Login
+                </a>
+                <a class="nav-link" href="{{ route('registerPage') }}">
+                    Register
+                </a>
+            @endif
         </div>
     </div>
 </nav>
